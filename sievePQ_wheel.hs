@@ -32,7 +32,7 @@ main = do
     print(finish - start)
 
 primes :: () -> [Int]
-primes = 2 : 3 : 5 : 7 : sieve (spin wheel2357 11)
+primes () = 2 : 3 : 5 : 7 : sieve (spin wheel2357 11)
 
 sieve [] = []
 sieve (x:xs) = x : sieve' xs (insertprime x xs MinPQueue.empty)

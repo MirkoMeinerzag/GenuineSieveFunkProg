@@ -32,7 +32,7 @@ main = do
     print(finish - start)
     
 primes :: () -> [Int]
-primes = sieveMap [2..]
+primes () = sieveMap [2..]
 sieveMap xs = sieve' xs Map.empty
   where
     sieve' [] table = []

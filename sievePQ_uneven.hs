@@ -32,7 +32,7 @@ main = do
     print(finish - start)
 
 primes :: () -> [Int]
-primes = 2: sieve [3,5..]
+primes () = 2: sieve [3,5..]
 
 sieve [] = []
 sieve (x:xs) = x : sieve' xs (insertprime x xs MinPQueue.empty)

@@ -30,7 +30,7 @@ main = do
     print(finish - start)
 
 primes :: () -> [Int]
-primes = 2:(minus [3..] composites)
+primes () = 2:(minus [3..] composites)
   where
     composites = union [multiples p | p <- primes]
 
